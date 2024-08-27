@@ -22,7 +22,7 @@ public class RabbitMQJsonPublisher {
     }
 
     public void sendJsonMessage(User user){
-        LOGGER.info(String.format("json message sent to queue -> %s",user.toString()));
+        LOGGER.info(String.format("json message sent to queue -> %s ",user.toString()));
         rabbitTemplate.convertAndSend(exchange,routingJsonKey,user);
     }
 }
